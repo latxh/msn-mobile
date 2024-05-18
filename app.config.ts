@@ -1,5 +1,9 @@
 import { defineConfig } from "@solidjs/start/config";
 
 export default defineConfig({
-  server: { preset: "static", output: { publicDir: "./docs" } },
+  server: {
+    baseURL: "/msn-mobile/",
+    preset: "static",
+    output: { publicDir: "./docs" },
+  },
 });
