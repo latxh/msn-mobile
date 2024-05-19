@@ -1,5 +1,6 @@
 .cardFull {
     border-bottom: 1px solid var(--card-border);
+    padding-top: 14px;
     padding-bottom: 12px;
 }
 

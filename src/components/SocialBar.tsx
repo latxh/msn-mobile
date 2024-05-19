@@ -24,6 +24,7 @@ const SocialBar: Component = () => {
                             window?.navigator?.vibrate?.(50);
                             if (reaction() === "like") {
                                 setReaction(null);
+                                setLikeCount((prev) => prev - 1);
                             } else {
                                 setReaction("like");
                                 setLikeCount((prev) => prev + 1);
@@ -52,7 +53,6 @@ const SocialBar: Component = () => {
                                 setReaction(null);
                             } else {
                                 setReaction("dislike");
-                                setLikeCount((prev) => prev - 1);
                             }
                         }}
                     >
