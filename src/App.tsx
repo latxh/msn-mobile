@@ -1,6 +1,5 @@
 import { createEffect, createMemo, createSignal, type Component } from "solid-js";
 
-import styles from "./App.module.css";
 import ThemeToggle from "./components/ThemeToggle";
 import Feed from "./components/Feed";
 

@@ -17,6 +17,39 @@
     border: 1px solid var(--button-stroke-rest);
 }
 
+.socialBar button:active {
+    border-color: var(--button-stroke-active);
+}
+
+.socialBar .voteWrapper button {
+    border: 1px solid transparent;
+}
+
+.voteWrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0px;
+    border-radius: 50px;
+    border: 1px solid var(--button-stroke-rest);
+}
+
+.voteWrapper:has(.reactionButton:active) {
+    border-color: var(--button-stroke-active);
+}
+
+.reactionButton {
+    display: flex;
+    gap: 6px;
+}
+
+.reactionButton:not(.active) svg {
+    fill: transparent;
+    stroke: var(--font-1);
+    stroke-width: 1.5px;
+}
+
 .likeCounter {
     color: var(--font-1);
     font-size: 13px;
@@ -31,40 +64,11 @@
     gap: 8px;
 }
 
-.voteWrapper {
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0px;
-    border-radius: 50px;
-    border: 1px solid var(--button-stroke-rest);
-}
-
-.socialBar button:active {
-    border-color: var(--button-stroke-active);
-}
-
-.socialBar .voteWrapper button {
-    border: 1px solid transparent;
-}
-
 .voteBreak {
     height: 18px;
     width: 2px;
     border-radius: 12px;
     background-color: var(--button-stroke-rest);
-}
-
-.reactionButton {
-    display: flex;
-    gap: 6px;
-}
-
-.reactionButton:not(.active) svg {
-    fill: transparent;
-    stroke: var(--font-1);
-    stroke-width: 1.5px;
 }
 
 .upvote {
@@ -73,12 +77,12 @@
 
 @media (prefers-reduced-motion: no-preference) {
     .likeAnim svg {
-        animation: like-anim 0.4s;
+        animation: like-anim 0.3s;
     }
 
     @keyframes like-anim {
         50% {
-            transform: rotate(-10deg) translateY(-4px);
+            transform: rotate(-10deg) translateY(-5px);
         }
     }
 }
