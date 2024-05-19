@@ -1,0 +1,95 @@
+.socialBar {
+    width: 100%;
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.socialBar button {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-radius: 50px;
+    padding: 6px 12px;
+    border: 1px solid var(--button-stroke-rest);
+}
+
+.likeCounter {
+    color: var(--font-1);
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.left,
+.right {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.voteWrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0px;
+    border-radius: 50px;
+    border: 1px solid var(--button-stroke-rest);
+}
+
+.socialBar button:active {
+    border-color: var(--button-stroke-active);
+}
+
+.socialBar .voteWrapper button {
+    border: 1px solid transparent;
+}
+
+.voteBreak {
+    height: 18px;
+    width: 2px;
+    border-radius: 12px;
+    background-color: var(--button-stroke-rest);
+}
+
+.reactionButton {
+    display: flex;
+    gap: 6px;
+}
+
+.reactionButton:not(.active) svg {
+    fill: transparent;
+    stroke: var(--font-1);
+    stroke-width: 1.5px;
+}
+
+.upvote {
+    color: var(--vote-blue);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .likeAnim svg {
+        animation: like-anim 0.4s;
+    }
+
+    @keyframes like-anim {
+        50% {
+            transform: rotate(-10deg) translateY(-4px);
+        }
+    }
+}
+
+/* Ad Bar */
+
+.adBar {
+    outline: 1px solid var(--button-stroke-active);
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: var(--font-1);
+    font-size: 13px;
+    font-weight: 400;
+}

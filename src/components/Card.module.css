@@ -1,0 +1,90 @@
+.cardFull {
+    border-bottom: 1px solid var(--card-border);
+    padding-bottom: 12px;
+}
+
+.cardLink {
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 8px;
+}
+
+.imageHalf,
+.image {
+    object-fit: cover;
+    background-color: var(--placeholder);
+    border-radius: 8px;
+    aspect-ratio: 1.91/1;
+    width: 100%;
+}
+
+.imageHalf {
+    width: 35%;
+}
+
+.attribution {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.publisherIcon {
+    background-color: var(--placeholder);
+    border-radius: 2px;
+    height: 18px;
+    width: 18px;
+}
+
+.publisherText {
+    color: var(--font-1);
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.articleText {
+    color: var(--font-1);
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0;
+    height: 2lh;
+    /* text-wrap: balance; */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Half Card */
+
+.cardHalf {
+    padding-top: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.cardLinkHalf {
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    padding-bottom: 8px;
+}
+
+.cardTop {
+    display: flex;
+    gap: 8px;
+}
+
+.cardLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cardHalf .articleText {
+    height: 3lh;
+    -webkit-line-clamp: 3;
+}

@@ -1,27 +1,43 @@
-import type { Component } from 'solid-js';
+import { createEffect, createMemo, createSignal, type Component } from "solid-js";
 
-import logo from './logo.svg';
-import styles from './App.module.css';
+import styles from "./App.module.css";
+import ThemeToggle from "./components/ThemeToggle";
+import Feed from "./components/Feed";
+
+export type Appearance = "light" | "dark" | "system";
 
 const App: Component = () => {
-  return (
-    <div class={styles.App}>
-      <header class={styles.header}>
-        <img src={logo} class={styles.logo} alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          class={styles.link}
-          href="https://github.com/solidjs/solid"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Solid
-        </a>
-      </header>
-    </div>
-  );
+    const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const [isSystemDarkMode, setSystemDarkMode] = createSignal(darkModeQuery.matches);
+
+    darkModeQuery.addEventListener("change", (m) => {
+        setSystemDarkMode(m.matches);
+    });
+
+    const [appearance, setAppearance] = createSignal<Appearance>((localStorage.getItem("appearance") as Appearance) ?? "system");
+
+    createEffect(() => {
+        localStorage.setItem("appearance", appearance());
+    });
+
+    const isDarkMode = createMemo(() => (appearance() === "system" ? isSystemDarkMode() : appearance() === "dark"));
+
+    createEffect(() => {
+        const htmlElm = document.querySelector(":root")!;
+
+        if (isDarkMode()) {
+            htmlElm?.classList.add("dark");
+        } else {
+            htmlElm?.classList.remove("dark");
+        }
+    });
+
+    return (
+        <div>
+            <ThemeToggle setAppearance={setAppearance} isDarkMode={isDarkMode()} />
+            <Feed />
+        </div>
+    );
 };
 
 export default App;
