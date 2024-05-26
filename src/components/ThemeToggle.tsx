@@ -8,10 +8,12 @@ const ThemeToggle: Component<{ setAppearance: Setter<Appearance>; isDarkMode: bo
         <button
             style={{
                 position: "absolute",
-                top: "20px",
+                bottom: "20px",
                 right: "20px",
-                height: "60px",
-                width: "60px",
+                height: "40px",
+                width: "40px",
+                display: "flex",
+                "align-items": "center",
                 "background-color": "var(--theme-toggle)",
             }}
             aria-label="Toggle dark mode"
