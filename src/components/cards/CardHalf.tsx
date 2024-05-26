@@ -1,8 +1,8 @@
 import { Component } from "solid-js";
-import SocialBar from "./SocialBar";
+import SocialBar from "../social-bar/SocialBar";
 import styles from "./Card.module.css";
 import Attribution from "./Attribution";
-import { Card } from "./Feed";
+import { Card } from "../Feed";
 
 const CardHalf: Component<{ card: Card }> = (props) => {
     return (
@@ -14,7 +14,7 @@ const CardHalf: Component<{ card: Card }> = (props) => {
                 </div>
                 <img class={styles.imageHalf} src={props.card.images[0].url} alt={props.card.images[0].caption || props.card.title} />
             </a>
-            <SocialBar />
+            <SocialBar link={props.card.url} />
         </div>
     );
 };

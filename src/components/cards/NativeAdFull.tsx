@@ -1,7 +1,6 @@
 import { Component } from "solid-js";
-import AdBar from "./AdBar";
+import AdBar from "../social-bar/AdBar";
 import styles from "./Card.module.css";
-import { Card } from "./Feed";
 
 const NativeAdFull: Component = () => {
     return (

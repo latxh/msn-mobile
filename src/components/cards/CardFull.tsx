@@ -1,7 +1,7 @@
 import { Component } from "solid-js";
-import SocialBar from "./SocialBar";
+import SocialBar from "../social-bar/SocialBar";
 import styles from "./Card.module.css";
-import { Card } from "./Feed";
+import { Card } from "../Feed";
 import Attribution from "./Attribution";
 
 const CardFull: Component<{ card: Card }> = (props) => {
@@ -12,7 +12,7 @@ const CardFull: Component<{ card: Card }> = (props) => {
                 <Attribution card={props.card} />
                 <h2 class={styles.articleText}>{props.card.title}</h2>
             </a>
-            <SocialBar />
+            <SocialBar link={props.card.url} />
         </div>
     );
 };

@@ -1,0 +1,118 @@
+.header {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 14px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    /* background-color: var(--header-background); */
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    /* border-bottom: 1px solid var(--header-stroke); */
+}
+
+.headerTop {
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav,
+.profilePic {
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+}
+
+.profilePic img {
+    height: 32px;
+    width: 32px;
+    border-radius: 50px;
+}
+
+.searchBar {
+    /* margin: 0 14px; */
+}
+
+/* INPUT STYLES */
+
+/* .input-label {
+    color: #59586A;
+    font-size: 18px;
+    padding-bottom: 10px;
+    display: block;
+    max-width: 492px;
+    width: 100%;
+} */
+
+.searchBar {
+    box-sizing: border-box;
+    caret-color: #59586a;
+    background: #222222;
+    border: solid 1px #333333;
+    border-radius: 50px;
+    color: #59586a;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 14px 20px;
+    /* max-width: 492px; */
+    width: 100%;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+.searchBar:hover {
+    border: solid 1px #1a73e8;
+}
+
+.searchBar:focus,
+.searchBar:focus-visible {
+    outline: none;
+    border: solid 1px #1a73e8;
+    box-shadow: 0 0 0 2px rgba(39, 94, 254, 0.3);
+}
+
+.searchBar:invalid {
+    border: solid 1px rgb(232, 26, 26);
+}
+
+.searchBar:invalid:focus {
+    box-shadow: 0 0 0 2px rgba(232, 39, 39, 0.3);
+}
+
+/* ICON INPUT STYLES */
+
+.searchBar {
+    background: #222 url(../../assets/SearchIconLight.svg) no-repeat;
+    background-position: top 10px right 10px;
+    padding-right: 42px;
+    background-size: 24px;
+}
+
+html.dark > .searchBar {
+    display: none !important;
+}
+
+.searchBar::-webkit-search-cancel-button {
+    cursor: pointer;
+    position: relative;
+    right: -14px;
+    -webkit-appearance: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    background: url(../../assets/SearchIcon.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: background-color 0.2s;
+}
+
+.searchBar::-webkit-search-cancel-button:hover {
+    background-color: rgba(44, 43, 60, 0.08);
+}

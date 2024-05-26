@@ -1,7 +1,8 @@
 import { Component, For, Match, Show, Switch, createResource } from "solid-js";
-import CardFull from "./CardFull";
-import CardHalf from "./CardHalf";
-import NativeAdFull from "./NativeAdFull";
+import CardFull from "./cards/CardFull";
+import CardHalf from "./cards/CardHalf";
+import NativeAdFull from "./cards/NativeAdFull";
+import NativeAdHalf from "./cards/NativeAdHalf";
 
 export type FeedResponse = {
     sections: Section[];
@@ -58,7 +59,7 @@ const Feed: Component = () => {
                 timeOut: "2000",
                 cm: "en-us",
                 edgeMobileAds: "1",
-                User: "m-07A8AE70EAE462CE1DBCBD90EB5E6365",
+                User: "m-07A8AE70EAE462CE1DBCBD90EB5E6367",
             })}`
         );
 
@@ -67,7 +68,7 @@ const Feed: Component = () => {
 
     // <pre>{JSON.stringify(cards, null, 4)}</pre>;
     return (
-        <div>
+        <div class="feed">
             <For each={feed()?.sections.flatMap((section) => section.cards)}>
                 {(card, index) => (
                     // add to Switch atr: fallback={<div>Unsupported {card.type}</div>}
@@ -79,6 +80,7 @@ const Feed: Component = () => {
                         </Match>
                         <Match when={card.type === "nativead"}>
                             <NativeAdFull />
+                            <NativeAdHalf />
                         </Match>
                     </Switch>
                 )}

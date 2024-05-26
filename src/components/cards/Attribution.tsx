@@ -1,7 +1,6 @@
 import { Component } from "solid-js";
-import SocialBar from "./SocialBar";
 import styles from "./Card.module.css";
-import { Card } from "./Feed";
+import { Card } from "../Feed";
 import { FormatDistanceFn, FormatDistanceToNowStrictOptions, LocalizedOptions, addDays, formatDistanceToNowStrict, isAfter, isBefore, subDays } from "date-fns";
 import locale from "date-fns/locale/en-US";
 

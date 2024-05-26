@@ -2,6 +2,7 @@ import { createEffect, createMemo, createSignal, type Component } from "solid-js
 
 import ThemeToggle from "./components/ThemeToggle";
 import Feed from "./components/Feed";
+import Header from "./components/header/Header";
 
 export type Appearance = "light" | "dark" | "system";
 
@@ -33,6 +34,7 @@ const App: Component = () => {
 
     return (
         <div>
+            <Header />
             <ThemeToggle setAppearance={setAppearance} isDarkMode={isDarkMode()} />
             <Feed />
         </div>

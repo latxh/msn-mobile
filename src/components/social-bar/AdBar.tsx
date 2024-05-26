@@ -1,5 +1,5 @@
 import { Component } from "solid-js";
-import AdIcon from "./icons/AdIcon";
+import AdIcon from "../icons/AdIcon";
 import styles from "./SocalBar.module.css";
 
 const AdBar: Component = () => {

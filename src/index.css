@@ -12,6 +12,8 @@
     --button-background-active: #e0ebff;
     --vote-blue: #1259de;
 
+    --header-background: rgba(245, 245, 245, 0.7);
+    --header-stroke: #ccd2e4;
     --card-border: #eaeaea;
     --placeholder: #d9d9d9;
 
@@ -30,6 +32,8 @@
     --button-background-active: #07233f;
     --vote-blue: #2c95ff;
 
+    --header-background: rgba(13, 13, 13, 0.7);
+    --header-stroke: #333333;
     --card-border: #2b2b2b;
     --placeholder: #333333;
 
@@ -39,8 +43,11 @@
 body {
     max-width: 640px;
     margin: 0 auto;
-    padding: 0 16px;
     background-color: var(--background);
+}
+
+.feed {
+    padding: 0 16px;
 }
 
 a,
@@ -82,7 +89,6 @@ button:not(:active) {
 }
 
 button:active {
-    background: var(--button-background-active);
     border-color: var(--button-stroke-active);
 }
 
