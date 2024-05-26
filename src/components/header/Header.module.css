@@ -14,7 +14,7 @@
 }
 
 .headerTop {
-    padding: 0 14px;
+    /* padding: 0 14px; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -54,6 +54,7 @@
 
 .searchBar {
     box-sizing: border-box;
+    height: 48px;
     caret-color: #59586a;
     background: #222222;
     border: solid 1px #333333;
