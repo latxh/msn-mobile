@@ -53,7 +53,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
     .likeAnim svg {
-        animation: like-anim 0.5s;
+        animation: like-anim 0.4s;
     }
 
     @keyframes like-anim {
