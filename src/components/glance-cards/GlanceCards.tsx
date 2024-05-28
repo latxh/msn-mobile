@@ -38,7 +38,7 @@ const GlanceCards: Component = () => {
                 <button class={styles.glanceCard}>
                     <div class={styles.col}>
                         <h2 class={styles.priText}>5:30 PM</h2>
-                        <p class={styles.secText}>TOR v SEA · Today</p>
+                        <p class={styles.secText}>TOR v SEA</p>
                     </div>
                     <TorontoIcon />
                 </button>
