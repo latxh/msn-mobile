@@ -59,7 +59,7 @@ const Feed: Component = () => {
                 timeOut: "2000",
                 cm: "en-us",
                 edgeMobileAds: "1",
-                User: "m-07A8AE70EAE462CE1DBCBD90EB5E6368",
+                User: "m-07A8AE70EAE462CE1DBCBD90EB5E6369",
             })}`
         );
 
