@@ -7,18 +7,15 @@ import ProfilePic from "../../assets/ProfilePic.jpg";
 const Header: Component = () => {
     return (
         <div class={styles.header}>
-            <div class={styles.headerTop}>
-                <button class={styles.nav} aria-label="Open navigation menu">
-                    <NavIcon />
-                </button>
+            <button class={styles.nav} aria-label="Open navigation menu">
+                <NavIcon />
+            </button>
 
-                <Logo />
+            <Logo />
 
-                <button class={styles.profilePic} aria-label="Open profile settings">
-                    <img src={ProfilePic} alt="" />
-                </button>
-            </div>
-            <input class={styles.searchBar} type="search" placeholder="Search the web" />
+            <button class={styles.profilePic} aria-label="Open profile settings">
+                <img src={ProfilePic} alt="Profile picture" />
+            </button>
         </div>
     );
 };

@@ -1,0 +1,66 @@
+.carousel {
+    display: flex;
+    gap: 8px;
+    overflow-x: scroll;
+    padding: 10px 16px 18px 16px;
+    position: relative;
+    scrollbar-width: none;
+    white-space: nowrap;
+}
+
+.glanceCard {
+    width: 180px;
+    height: 80px;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: var(--background);
+    border: 1px solid var(--card-border);
+    padding: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.glanceCard:active {
+    background-color: var(--glance-card-active);
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 6px;
+}
+
+.priText {
+    color: var(--font-1);
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0;
+    height: 1lh;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.secText {
+    color: var(--font-2);
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0;
+    height: 1lh;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.stockChange {
+    padding-left: 8px;
+    background: -webkit-linear-gradient(left, var(--money-grad-start), var(--money-grad-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

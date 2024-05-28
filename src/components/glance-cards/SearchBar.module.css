@@ -1,0 +1,35 @@
+.searchWrapper {
+    margin: 6px 12px;
+    position: relative;
+}
+
+.searchIcon {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+}
+
+.searchBar {
+    height: 48px;
+    caret-color: var(--font-2);
+    background: var(--search-background);
+    border: solid 1px var(--search-border);
+    border-radius: 50px;
+    color: var(--font-1);
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0 20px;
+    width: 100%;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+.searchBar::placeholder {
+    color: var(--font-2);
+}
+
+.searchBar:focus,
+.searchBar:focus-visible {
+    outline: none;
+    border: solid 1px var(--vote-blue);
+    box-shadow: 0 0 0 3px var(--button-background-active);
+}
