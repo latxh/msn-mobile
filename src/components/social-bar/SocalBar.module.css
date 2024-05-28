@@ -57,17 +57,8 @@
     }
 
     @keyframes like-anim {
-        0% {
-            transform: rotate(0deg) translateY(0) scale(1);
-        }
-        40% {
+        50% {
             transform: rotate(-10deg) translateY(-5px) scale(1.2);
-        }
-        60% {
-            transform: rotate(-10deg) translateY(-5px) scale(1.2);
-        }
-        100% {
-            transform: rotate(0deg) translateY(0) scale(1);
         }
     }
 }
