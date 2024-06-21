@@ -8,11 +8,11 @@ const ThemeToggle: Component<{ setAppearance: Setter<Appearance>; isDarkMode: bo
         <button
             style={{
                 border: "none",
-                position: "absolute",
+                position: "fixed",
                 bottom: "20px",
                 right: "20px",
-                height: "40px",
-                width: "40px",
+                height: "50px",
+                width: "50px",
                 display: "flex",
                 "align-items": "center",
                 "border-radius": "50px",
