@@ -13,34 +13,53 @@ const SocialBar: Component<{ link: string }> = (props) => {
     return (
         <div class={styles.socialBar}>
             <div class={styles.left}>
-                <button
-                    classList={{
-                        [styles.reactionButton]: true,
-                        [styles.active]: reaction() === "like",
-                        [styles.likeAnim]: reaction() === "like",
-                    }}
-                    onClick={(event) => {
-                        event.stopPropagation();
-                        window?.navigator?.vibrate?.(50);
-                        if (reaction() === "like") {
-                            setReaction(null);
-                            setLikeCount((prev) => prev - 1);
-                        } else {
-                            setReaction("like");
-                            setLikeCount((prev) => prev + 1);
-                        }
-                    }}
-                >
-                    <LikeIcon />
-                    <p
+                <div class={styles.voteWrapper}>
+                    <button
                         classList={{
-                            [styles.likeCounter]: true,
-                            [styles.upvote]: reaction() === "like",
+                            [styles.reactionButton]: true,
+                            [styles.active]: reaction() === "like",
+                            [styles.likeAnim]: reaction() === "like",
+                        }}
+                        onClick={(event) => {
+                            event.stopPropagation();
+                            window?.navigator?.vibrate?.(50);
+                            if (reaction() === "like") {
+                                setReaction(null);
+                                setLikeCount((prev) => prev - 1);
+                            } else {
+                                setReaction("like");
+                                setLikeCount((prev) => prev + 1);
+                            }
                         }}
                     >
-                        {likeCount()}
-                    </p>
-                </button>
+                        <LikeIcon />
+                        <p
+                            classList={{
+                                [styles.likeCounter]: true,
+                                [styles.upvote]: reaction() === "like",
+                            }}
+                        >
+                            {likeCount()}
+                        </p>
+                    </button>
+
+                    <div class={styles.voteBreak}></div>
+
+                    <button
+                        class={styles.reactionButton}
+                        classList={{ [styles.active]: reaction() === "dislike" }}
+                        onClick={(event) => {
+                            event.stopPropagation();
+                            if (reaction() === "dislike") {
+                                setReaction(null);
+                            } else {
+                                setReaction("dislike");
+                            }
+                        }}
+                    >
+                        <DislikeIcon />
+                    </button>
+                </div>
 
                 <button
                     class={styles.comments}
