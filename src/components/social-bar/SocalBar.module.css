@@ -80,14 +80,13 @@
 
 @media (prefers-reduced-motion: no-preference) {
     .likeAnim svg {
-        will-change: transform;
         animation: like-anim 0.4s;
     }
 
     @keyframes like-anim {
         50% {
-            transform: rotate(-10deg) translateY(-5px) scale(1.2);
-            -webkit-transform: rotate(-10deg) translateY(-5px) scale(1.2);
+            transform: translate3d(0, 0, 0) rotate(-10deg) translateY(-5px) scale(1.2);
+            -webkit-transform: translate3d(0, 0, 0) rotate(-10deg) translateY(-5px) scale(1.2);
         }
     }
 }
