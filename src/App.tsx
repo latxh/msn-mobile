@@ -1,6 +1,5 @@
 import { createEffect, createMemo, createSignal, type Component } from "solid-js";
 
-import ThemeToggle from "./components/ThemeToggle";
 import Feed from "./components/Feed";
 import Header from "./components/header/Header";
 import GlanceCards from "./components/glance-cards/GlanceCards";
@@ -35,9 +34,8 @@ const App: Component = () => {
 
     return (
         <div>
-            <Header />
+            <Header setAppearance={setAppearance} isDarkMode={isDarkMode()} />
             <GlanceCards />
-            <ThemeToggle setAppearance={setAppearance} isDarkMode={isDarkMode()} />
             <Feed />
         </div>
     );

@@ -1,10 +1,11 @@
-import { Component } from "solid-js";
+import { Component, Setter } from "solid-js";
 import Logo from "../icons/Logo";
 import NavIcon from "../icons/NavIcon";
 import styles from "./Header.module.css";
 import ProfilePic from "../../assets/ProfilePic.jpg";
+import { Appearance } from "../../App";
 
-const Header: Component = () => {
+const Header: Component<{ setAppearance: Setter<Appearance>; isDarkMode: boolean }> = (props) => {
     return (
         <div class={styles.header}>
             <button class={styles.nav} aria-label="Open navigation menu">
@@ -13,7 +14,13 @@ const Header: Component = () => {
 
             <Logo />
 
-            <button class={styles.profilePic} aria-label="Open profile settings">
+            <button
+                class={styles.profilePic}
+                aria-label="Open profile settings"
+                onClick={() => {
+                    props.setAppearance(props.isDarkMode ? "light" : "dark");
+                }}
+            >
                 <img src={ProfilePic} alt="Profile picture" />
             </button>
         </div>
